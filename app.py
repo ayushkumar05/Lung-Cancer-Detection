@@ -34,7 +34,7 @@ def upload_file():
         print(path)
         img = image.load_img(path, target_size=(224, 224))
 
-        return render_template('result.html',DATA = ProcessInput(img))
+        return render_template('index.html',DATA = ProcessInput(img))
     
     return render_template('index.html')
 

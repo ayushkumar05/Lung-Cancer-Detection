@@ -1,9 +1,69 @@
-﻿<html>
-  <body>
-    <h1>Upload new File</h1>
-    <form method="post" enctype="multipart/form-data">
-      <input type="file" name="file1" />
-      <input type="submit" />
-    </form>
-  </body>
+﻿<!DOCTYPE html>
+<html>
+<title>Lung Cancer Detection</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h5 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('http://127.0.0.1:5000/static/img/bg.jpg');
+  background-color:black;
+  min-height: 100%;
+  background-position: center;
+  background-repeat:no-repeat
+}
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-text-white">
+  <div class="w3-display-middle w3-jumbo">
+    <p style="background-color: #00000034;">Lung Cancer Detection</p>
+  </div>
+  <div class="w3-display-topleft w3-container w3-xlarge">
+    <p><id ="dbut" button onclick="document.getElementById('demo').style.display='block'" style ="border-radius:12px; "class="w3-button w3-black">Demo</button></p>
+    <p><button onclick="document.getElementById('contact').style.display='block'"  style ="border-radius:12px; "  class="w3-button w3-black">contact</button></p>
+  </div>
+
+
+<!-- Menu Modal -->
+
+
+<div id="demo" class="w3-modal">
+   <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black">
+      <span onclick="document.getElementById('demo').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Upload File</h1>
+    </div>
+    <div class="w3-container" style = "padding-top: 2%; padding-bottom:2%;">
+      <form method="post" enctype="multipart/form-data" >
+          <input type="file" name="file1" />
+          <input type="submit" class="w3-button" style ="border-radius:12px; background-color:black; "/>
+        </form>
+      <h1  style ="color:black; ">{{DATA}}</h1>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Modal -->
+<div id="contact" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black">
+      <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Contact</h1>
+    </div>
+    <div class="w3-container">
+      <form action="/action_page.php" target="_blank">
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+        <p><button class="w3-button" style ="border-radius:12px; background-color:black; "type="submit">SEND MESSAGE</button></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
 </html>
+
