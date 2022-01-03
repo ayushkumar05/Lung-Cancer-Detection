@@ -18,7 +18,7 @@ def ProcessInput(img):
     img_data = preprocess_input(x)
     classes = model.predict(img_data)
     if classes[0][0]:
-        return "nothing detected"
+        return "not detected"
     else:
         return "detected"
 
